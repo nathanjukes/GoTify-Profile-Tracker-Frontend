@@ -17,8 +17,8 @@
         </header>
         <footer class="flex items-center justify-between leading-none p-2 md:p-4">
             <a class="flex items-center no-underline hover:underline text-black" href="#">
-              <img alt="Placeholder" class="block rounded-full" :src="a.user.imageUrl">
-              <p class="ml-2 text-sm">
+              <img class="inline object-cover w-12 h-12 mr-2 rounded-full" :src="a.user.imageUrl">
+              <p class="text-sm">
                   {{ a.user.name }}
               </p>
             </a>
