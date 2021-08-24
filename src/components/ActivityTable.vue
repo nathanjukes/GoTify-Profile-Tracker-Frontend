@@ -1,26 +1,34 @@
 <template>
     <div id="activity-table">
-        <h1>Hello</h1>
-        <table>
-      <thead>
-        <tr>
-          <th>username</th>
-          <th>track</th>
-          <th>artist</th>
-          <th>album</th>
-          <th>time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="a in activities" :key="a.id">
-            <td><a :href="a.user.user_url">{{ a.user.name }}</a></td>
-            <td><a :href="a.track_url">{{ a.track.name }}</a></td>
-            <td><a :href="a.track.artist_url">{{ a.track.artist.name }}</a></td>
-            <td><a :href="a.track.album.album_url">{{ a.track.album.name }}</a></td>
-            <td>{{ a.time }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="space-y-4 pt-5" v-for="a in activities" :key="a.id">
+        <article class="overflow-hidden rounded-lg shadow-lg">
+        <a href="#">
+        <img alt="Placeholder" class="block h-auto w-full" :src="a.track.imageUrl">
+        </a>
+        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+            <h1 class="text-lg">
+              <a class="no-underline hover:underline text-black" href="#">
+               {{ a.track.name }} <br>{{ a.track.artist.name }}
+              </a>
+            </h1>
+            <p class="text-grey-darker text-sm">
+              {{ a.time }}
+            </p>
+        </header>
+        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+            <a class="flex items-center no-underline hover:underline text-black" href="#">
+              <img alt="Placeholder" class="block rounded-full" :src="a.user.imageUrl">
+              <p class="ml-2 text-sm">
+                  {{ a.user.name }}
+              </p>
+            </a>
+            <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+            <span class="hidden">Link</span>
+            <i class="fa fa-heart"></i>
+            </a>
+          </footer>
+        </article>
+      </div> 
     </div>
 </template>
 
