@@ -45,9 +45,8 @@
                       </header>
                         </div>
                         <div>
-            <a class="no-underline text-grey-darker hover:text-red-dark" :href="a.track_url">
-            <span class="hidden">Link</span>
-            <i class="fa fa-heart float-right mt-9 m-7"></i> </a>
+            <a class="no-underline text-grey-darker hover:text-red-dark" :href="a.track_id">
+            <i class="fa fa-play-circle float-right mt-9 m-7" style="font-size:28px"></i> </a>
                         </div>
                 </div>
               </div>
