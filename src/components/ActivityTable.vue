@@ -1,8 +1,9 @@
 <template>
     <div id="activity-table">
-      <div class="space-y-4 pt-5" v-for="a in activities" :key="a.id">
-        <article class="overflow-hidden rounded-lg shadow-lg">
-          <div class="flex flex-row">
+      <div v-if="activities.length == 0" class="text-center mt-5 text-lg">No songs currently tracked for this user, please come back later or refresh whenever! 😄</div>
+      <div class="space-y-4 pt-5" v-for="a in activities.slice(0, getRange())" :key="a.id">
+        <article class="overflow-hidden rounded-lg shadow-lg bg-third">
+          <div class="flex flex-row" style="color:white; font-weight:400;">
               <div>
                 <a :href="a.track_url">
                 <img alt="Placeholder" class="object-cover h-48 w-48" :src="a.track.imageUrl">
@@ -13,7 +14,7 @@
                   <div>
                   <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                           <h1 class="text-md">
-                            <a class="no-underline hover:underline text-black line-clamp-2 overflow-ellipsis" :href="a.track_url">
+                            <a class="no-underline hover:underline text-black line-clamp-2 overflow-ellipsis" style="color:white; font-weight:600;" :href="a.track_url">
                             {{ a.track.name }} 
                             </a>
                             <br>
@@ -46,7 +47,7 @@
                         </div>
                         <div>
             <a class="no-underline text-grey-darker hover:text-red-dark" :href="a.track_id">
-            <i class="fa fa-play-circle float-right mt-9 m-7" style="font-size:28px"></i> </a>
+            <i class="fas fa-share-square float-right mt-9 m-7" style="font-size:24px"></i> </a>
                         </div>
                 </div>
               </div>
@@ -66,12 +67,32 @@ export default {
     methods: {
             getHumanDate : function (date) {
                 return moment(date).format('DD/MM/YYYY HH:mma');
+            },
+            getRange : function() {
+              let len = 0
+              if (this.activities.length > 50) {
+                len = 50
+              }
+              
+              let prevID = ""
+
+              for (const a of this.activities.slice(0, len)) {
+                if (prevID == "") {
+                  prevID = a.user_id
+                }
+                else {
+                  if (prevID != a.user_id) {
+                    return len
+                  }
+                }
+              }
+              return this.activities.length
             }
         }
 }
 </script>
 
 <style scoped>
-
-</style>>
+ 
+</style>
 

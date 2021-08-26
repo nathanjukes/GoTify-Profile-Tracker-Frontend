@@ -11,7 +11,9 @@
    <button v-on:click="handleRefresh" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded float-right">
   Refresh
 </button>
-
+    <button v-on:click="handleHome" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded float-left">
+  Home
+</button>
 </div>
 </template>
 
@@ -45,6 +47,9 @@ export default {
         },
         handleRefresh() {
             this.$emit('search:user', this.user)
+        },
+        handleHome() {
+            this.$emit('get:activities')
         },
     },
 }

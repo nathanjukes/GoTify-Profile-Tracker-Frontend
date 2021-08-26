@@ -33,7 +33,7 @@
   </div>
   <div class="absolute top-0 right-0 block w-9/12 h-full">
     <img
-      alt="Snowy mountain lake"
+      alt="album"
       class="object-cover min-w-full h-full"
       src="https://wallpapercave.com/wp/wp6233356.jpg"
     />
@@ -47,7 +47,7 @@
         </div>
         <div class="flex flex-col w-full space-y-6">
           <div>
-            <user-search-form @search:user="getUserActivity"/>
+            <user-search-form @search:user="getUserActivity" @get:activities="getActivities"/>
           </div>
           <div>
             <activity-table :activities="activities" />
@@ -94,10 +94,12 @@ export default {
     async getUserActivity(user) {
       try {
           const endpoint = `http://localhost:8081/user/`
-          console.log(endpoint.concat(user.user_spotify_uri))
-          const response = await fetch(endpoint.concat(user.user_spotify_uri))
+          const response = await fetch(endpoint.concat(user.user_spotify_uri), {
+            method: 'POST',
+          })
           const data = await response.json()
           this.activities = data
+          this.range = this.activities.length
           this.getSpotifyURLs()
       } catch (error) {
         console.error(error)
@@ -124,5 +126,8 @@ export default {
 }
 </script>
 <style scoped>
-
+  @font-face {
+    font-family: 'Hina Mincho';
+    src: url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+  }
 </style>
