@@ -46,9 +46,15 @@ export default {
             }
         },
         handleRefresh() {
-            this.$emit('search:user', this.user)
+            if (this.user.user_id == '' && this.user.user_spotify_uri == '') {
+                this.$emit('get:activities')
+            } 
+            else {
+              this.$emit('search:user', this.user)  
+            }
         },
         handleHome() {
+            this.user = { user_id: '', user_spotify_uri: '' }
             this.$emit('get:activities')
         },
     },

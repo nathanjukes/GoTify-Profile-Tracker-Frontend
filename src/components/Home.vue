@@ -1,11 +1,11 @@
 <template>
-    <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <body class="bg-gray-100 font-sans leading-normal tracking-normal" style="font-family: 'Source Sans Pro', sans-serif;">
       <div class="flex flex-col">
         <div>
           <div class="relative h-64 m-8 overflow-hidden rounded-lg bg-secondary">
   <div class="absolute z-30 flex w-full h-full">
     <div class="relative z-30 w-5/6 px-12 py-8 md:py-10 md:w-1/2">
-      <h2 class="text-4xl">GoTify Profile Tracker</h2>
+      <h2 class="text-4xl underline">GoTify Profile Tracker</h2>
       <h2 class="text-2xl py-2">A Spotify profile activity tracker written in Go!<br>Part of Nathan Jukes' GoTify package</h2>
          <a class="navbar-brand" href="https://github.com/nathanjukes">
                 <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" style="width:90px;height:50px" class="embed-responsive-21by9">
@@ -43,8 +43,19 @@
         <div>
       <div class="flex flex-row w-full">
         <div class="flex flex-col w-full">
-          <div class="text-center">random</div>
-        </div>
+          <div class="flex flex-row mt-10">
+            <div class="ml-8">
+<div class="text-center text-2xl mr-20 object-centre">
+  <h1 class="underline">View my other repositories!</h1>
+  <h1 class="text-xl m-5">Here is my GitHub: <a class="underline" href="https://github.com/nathanjukes">Link!</a><br>Some of my projects include:</h1>
+  <h1 class="text-base m-5"><a href="https://github.com/nathanjukes/Sorting-Algorithm-Visualisation-Tool">- Sorting Algorithm Visualiser made in C# Windows Forms!</a></h1>
+  <h1 class="text-base m-5"><a href="https://github.com/nathanjukes/Git-Clone-r-">- Git CLI utility tool!</a></h1>
+  <h1 class="text-base m-5"><a href="https://github.com/nathanjukes/URL-Titan">- URL Shortener written in .NET Core!</a></h1>
+  <a href="https://github.com/nathanjukes"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"  style="width:70px;height:70px; display:block;margin-left:auto;margin-right: auto;"></a>
+</div>
+            </div>
+            </div>
+          </div>
         <div class="flex flex-col w-full space-y-6">
           <div>
             <user-search-form @search:user="getUserActivity" @get:activities="getActivities"/>
@@ -54,8 +65,22 @@
           </div>
         </div>
         <div class="flex flex-col w-full">
-          <div class="text-center">random</div>
+          <div class="flex flex-row mt-10">
+            <div class="w-1/2">
+            </div>
+            <div>
+<div class="text-center text-lg"><label class="underline">About Me</label><br>
+I'm a UK Based undergrad studying Computer Science at the University of Birmingham📚.
+<br><br>As of 2021, I am currently focused on .NET and Go. I thoroughly enjoy writing backend systems and use Vue.js whenever I need to write a frontend, which is not too often (As you can probably tell by the frontend on this 😄)
+<br><br>At the moment, I am spending most of my free time devoted to learning as much about Go as I can, I'm also writing microservice based applications in Go to learn more and more about Go + System design!
+<br><br>Feel free to email me <a href="mailto: nzjukes@gmail.com" class="underline">here</a> or checkout my <a href="https://github.com/nathanjukes" class="underline">GitHub!</a>
+<br>Any feedback is greatly appreciated!
+</div>
         </div>
+                    <div class="w-1/2">
+            </div>
+            </div>
+          </div>
       </div>
        </div>
     </div>
