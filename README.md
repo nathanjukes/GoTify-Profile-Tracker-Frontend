@@ -21,6 +21,8 @@
 
 ## Example
 
+<img src="https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend/blob/master/gotify-profile.gif">
+<img src="https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend/blob/master/gotify-profile-tracker-1.JPG">
 
 ## Personal use
 
