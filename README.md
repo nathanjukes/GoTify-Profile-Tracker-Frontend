@@ -1,6 +1,35 @@
-# gotify-profile-tracker
+<h1 align="center">
+  GoTify Profile Tracker (Backend)
+</h1>
 
-## Project setup
+<h4 align="center">A Vue.js frontend for my GoTify-Profile-Tracker API, see <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker">here!</a></h4>
+<h5 align="center">Uses my Go package <a href="https://github.com/nathanjukes/GoTify-BuddyListt">Spotify-BuddyList</a> for grabbing the data!</h5>
+
+
+<p align="center">
+  <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend">
+      <img src="https://scrutinizer-ci.com/g/pH7Software/pH7-Social-Dating-CMS/badges/build.png?b=master">
+  </a>
+  <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend">
+    <img src="https://img.shields.io/badge/version-v1.0-blue">
+  </a>
+  <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg">
+  </a>
+</p>
+
+
+## Example
+
+
+## Personal use
+
+### Backend setup
+
+Follow tutorial in the backend repo <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker">here!</a>
+
+
+### Project setup
 ```
 npm install
 ```
@@ -15,10 +44,10 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Change Log
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Released 28/08/21
+
+### License
+[MIT](https://github.com/nathanjukes/GoTify-Profile-Tracker-Frontend/blob/master/LICENSE.md)
+
