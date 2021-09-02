@@ -1,9 +1,9 @@
 <h1 align="center">
-  GoTify Profile Tracker (Backend)
+  GoTify Profile Tracker (Frontend)
 </h1>
 
 <h4 align="center">A Vue.js frontend for my GoTify-Profile-Tracker API, see <a href="https://github.com/nathanjukes/GoTify-Profile-Tracker">here!</a></h4>
-<h5 align="center">Uses my Go package <a href="https://github.com/nathanjukes/GoTify-BuddyListt">Spotify-BuddyList</a> for grabbing the data!</h5>
+<h5 align="center">Uses my Go package <a href="https://github.com/nathanjukes/GoTify-BuddyList">Spotify-BuddyList</a> for grabbing the data!</h5>
 <h5 align="center">Currently hosted <a href="http://gotifyprofiletracker.rf.gd/">here!</a></h5>
 
 
